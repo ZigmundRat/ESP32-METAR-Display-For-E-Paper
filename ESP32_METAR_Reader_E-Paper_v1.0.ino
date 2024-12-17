@@ -762,7 +762,6 @@ void StartWiFi() {
   WiFi.disconnect();
   WiFi.mode(WIFI_STA); // switch off AP
   WiFi.setAutoConnect(true);
-  WiFi.setAutoReconnect(true);
   WiFi.begin(ssid, password);
   while (WiFi.waitForConnectResult() != WL_CONNECTED) {
     Serial.printf("STA : Failed!\n");
